@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miss You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #fff0f5;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 10px 30px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff1493;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 28px;
+      color: #d63384;
+      display: none;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: pop 0.6s ease forwards;
+      display: inline-block;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showMessage()">Miss You</button>
+
+  <div id="response" class="message">
+    Miss you too so much <span class="heart">💖</span>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('response').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
